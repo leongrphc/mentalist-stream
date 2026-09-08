@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-28T21:25:31.7207986+03:00",
+  "title": "Design System: Mentalist Stream",
+  "extensions": {
+    "colorMeta": {
+      "cinema-black": { "role": "neutral", "displayName": "Cinema Black", "canonical": "#080808", "tonalRamp": ["#080808", "#171717", "#292929", "#414141", "#626262", "#898989", "#b9b9b9", "#eeeeee"] },
+      "catalog-black": { "role": "neutral", "displayName": "Catalog Black", "canonical": "#141414", "tonalRamp": ["#080808", "#141414", "#272727", "#404040", "#606060", "#878787", "#b8b8b8", "#eeeeee"] },
+      "raised-charcoal": { "role": "neutral", "displayName": "Raised Charcoal", "canonical": "#202020", "tonalRamp": ["#0b0b0b", "#202020", "#343434", "#4c4c4c", "#6b6b6b", "#909090", "#bdbdbd", "#efefef"] },
+      "soft-charcoal": { "role": "neutral", "displayName": "Soft Charcoal", "canonical": "#2b2b2b", "tonalRamp": ["#0d0d0d", "#222222", "#383838", "#505050", "#6f6f6f", "#939393", "#bfbfbf", "#efefef"] },
+      "warm-white": { "role": "primary", "displayName": "Warm White", "canonical": "#f5f5f1", "tonalRamp": ["#252521", "#474742", "#6b6b65", "#909089", "#b5b5ae", "#d3d3cd", "#e8e8e3", "#f5f5f1"] },
+      "muted-silver": { "role": "neutral", "displayName": "Muted Silver", "canonical": "#b3b3b3", "tonalRamp": ["#232323", "#414141", "#606060", "#808080", "#9d9d9d", "#b3b3b3", "#d1d1d1", "#f0f0f0"] },
+      "quiet-gray": { "role": "neutral", "displayName": "Quiet Gray", "canonical": "#777777", "tonalRamp": ["#181818", "#303030", "#494949", "#626262", "#777777", "#999999", "#c2c2c2", "#eeeeee"] },
+      "netflix-red": { "role": "primary", "displayName": "Netflix Red", "canonical": "#e50914", "tonalRamp": ["#310206", "#5d0309", "#8c050d", "#b70711", "#e50914", "#ef4850", "#f68d92", "#fddadd"] },
+      "match-green": { "role": "secondary", "displayName": "Match Green", "canonical": "#46d369", "tonalRamp": ["#092f13", "#105b26", "#19883a", "#2ab34f", "#46d369", "#77e18f", "#aaeeb8", "#def9e5"] },
+      "browse-cyan": { "role": "secondary", "displayName": "Browse Cyan", "canonical": "#54b9c5", "tonalRamp": ["#0b292d", "#14515a", "#207983", "#359ca8", "#54b9c5", "#83cfD8", "#b2e3e8", "#e2f6f8"] },
+      "hairline": { "role": "neutral", "displayName": "White Hairline", "canonical": "rgba(255,255,255,.14)", "tonalRamp": ["rgba(255,255,255,.04)", "rgba(255,255,255,.08)", "rgba(255,255,255,.14)", "rgba(255,255,255,.22)", "rgba(255,255,255,.35)", "rgba(255,255,255,.52)", "rgba(255,255,255,.74)", "rgba(255,255,255,.95)"] },
+      "action-white": { "role": "neutral", "displayName": "Action White", "canonical": "#ffffff", "tonalRamp": ["#262626", "#4a4a4a", "#707070", "#989898", "#bfbfbf", "#dddddd", "#f0f0f0", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Series Display", "purpose": "The hero series mark and oversized inner-page numerals." },
+      "headline": { "displayName": "Hero Headline", "purpose": "The billboard proposition and player-state headings." },
+      "title": { "displayName": "Catalog Title", "purpose": "Rail headings and content group titles." },
+      "body": { "displayName": "Streaming Body", "purpose": "Summaries, descriptions, legal-source messaging, and Turkish interface copy." },
+      "label": { "displayName": "Metadata Label", "purpose": "Navigation, episode codes, dates, durations, status, and controls." }
+    },
+    "shadows": [
+      { "name": "hero-title", "value": "0 3px 22px rgba(0,0,0,.65)", "purpose": "Protects the series mark over full-bleed episode photography." },
+      { "name": "hero-copy", "value": "0 2px 12px rgba(0,0,0,.8)", "purpose": "Protects the synopsis over detailed imagery." },
+      { "name": "episode-grounding", "value": "0 .6rem 1.4rem rgba(0,0,0,.22)", "purpose": "Separates episode media from the catalog surface." }
+    ],
+    "motion": [
+      { "name": "state-quick", "value": "160ms ease", "purpose": "Color, opacity, and control feedback." },
+      { "name": "media-zoom", "value": "260ms cubic-bezier(.2,.8,.2,1)", "purpose": "Episode image and card zoom with a quick, controlled settle." },
+      { "name": "rail-scroll", "value": "smooth", "purpose": "Moves a rail by approximately 82% of its visible width." },
+      { "name": "reduced-motion", "value": ".01ms", "purpose": "Collapses animation and transition duration when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "900px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Play Action",
+      "kind": "button",
+      "refersTo": "button-play",
+      "description": "The primary route from the billboard into the first episode.",
+      "html": "<a class=\"ds-play-action\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m8 5 11 7-11 7Z\"/></svg>1. bölümü aç</a>",
+      "css": ".ds-play-action{min-height:3.2rem;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:.7rem 1.45rem;border-radius:.3rem;background:#fff;color:#000;text-decoration:none;font:700 .9rem/1 var(--font-body),sans-serif;transition:background 160ms ease,color 160ms ease}.ds-play-action svg{width:1.35rem;fill:currentColor;stroke:none}.ds-play-action:hover{background:rgba(255,255,255,.75)}.ds-play-action:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Information Action",
+      "kind": "button",
+      "refersTo": "button-info",
+      "description": "A secondary billboard route for show context.",
+      "html": "<a class=\"ds-info-action\" href=\"#\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 11v6M12 7h.01\"/></svg>Daha fazla bilgi</a>",
+      "css": ".ds-info-action{min-height:3.2rem;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:.7rem 1.45rem;border-radius:.3rem;background:rgba(109,109,110,.72);color:#fff;text-decoration:none;font:700 .9rem/1 var(--font-body),sans-serif;transition:background 160ms ease}.ds-info-action svg{width:1.35rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.ds-info-action:hover{background:rgba(109,109,110,.48)}.ds-info-action:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Compact routes within the fixed streaming header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Ana navigasyon\"><a href=\"#\">Ana sayfa</a><a href=\"#\" aria-current=\"page\">Bölümler</a><a href=\"#\">Karakterler</a><a href=\"#\">Hakkında</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.6rem;font:400 .88rem/1 var(--font-body),sans-serif}.ds-nav a{color:#e5e5e5;text-decoration:none;transition:color 160ms ease}.ds-nav a:hover{color:var(--muted)}.ds-nav a[aria-current=page]{color:#fff;font-weight:600}.ds-nav a:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Season Select",
+      "kind": "input",
+      "refersTo": "season-select",
+      "description": "The direct seven-season switcher on browse pages.",
+      "html": "<label class=\"ds-season-select\">Sezon seç<select><option>1. sezon</option><option>2. sezon</option><option>3. sezon</option></select></label>",
+      "css": ".ds-season-select{display:grid;gap:.35rem;color:var(--muted);font:600 .72rem/1 var(--font-body),sans-serif;text-transform:uppercase;letter-spacing:.1em}.ds-season-select select{min-width:10rem;padding:.65rem 2.4rem .65rem .8rem;border:1px solid #666;border-radius:.2rem;background:#111;color:#fff;font:600 .9rem/1.2 var(--font-body),sans-serif}.ds-season-select select:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Episode Card",
+      "kind": "card",
+      "refersTo": "episode-card",
+      "description": "A 16:9 rail card with direct playback affordance and compact metadata.",
+      "html": "<a class=\"ds-episode-card\" href=\"#\"><div class=\"ds-card-image\"><span class=\"ds-missing-art\">THE MENTALIST<b>S1 B01</b></span><span class=\"ds-play-disc\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 7 8 5-8 5Z\"/></svg></span><span class=\"ds-episode-code\">S1:B01</span></div><div class=\"ds-card-copy\"><strong>Pilot</strong><span>43 dk</span></div></a>",
+      "css": ".ds-episode-card{width:18rem;display:block;color:var(--white);text-decoration:none;transition:transform 200ms cubic-bezier(.2,.8,.2,1)}.ds-card-image{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:.35rem;background:#252525;box-shadow:0 .6rem 1.4rem rgba(0,0,0,.22)}.ds-missing-art{position:absolute;inset:0;display:grid;place-content:center;gap:.8rem;background:linear-gradient(135deg,#310e12,#171717 58%,#242424);color:var(--red);font:700 .58rem/1 var(--font-body),sans-serif;letter-spacing:.08em;text-align:center}.ds-missing-art b{color:rgba(255,255,255,.82);font-size:.72rem}.ds-play-disc{position:absolute;inset:50% auto auto 50%;width:2.9rem;height:2.9rem;display:grid;place-items:center;border:2px solid #fff;border-radius:50%;background:rgba(0,0,0,.64);opacity:0;transform:translate(-50%,-40%) scale(.8);transition:opacity 160ms ease,transform 200ms ease}.ds-play-disc svg{width:1.3rem;fill:#fff;stroke:none}.ds-episode-code{position:absolute;left:.7rem;bottom:.55rem;padding:.18rem .4rem;border-radius:.2rem;background:rgba(0,0,0,.72);font:700 .7rem/1 var(--font-body),sans-serif}.ds-card-copy{display:flex;justify-content:space-between;gap:.75rem;padding:.65rem .2rem 0;font:400 .76rem/1.2 var(--font-body),sans-serif}.ds-card-copy strong{overflow:hidden;font-size:.92rem;white-space:nowrap;text-overflow:ellipsis}.ds-card-copy span{color:var(--muted)}.ds-episode-card:hover,.ds-episode-card:focus-visible{transform:translateY(-.3rem) scale(1.025)}.ds-episode-card:hover .ds-play-disc,.ds-episode-card:focus-visible .ds-play-disc{opacity:1;transform:translate(-50%,-50%) scale(1)}.ds-episode-card:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Rail Control",
+      "kind": "button",
+      "description": "A dark edge control for paging wide episode shelves on hover-capable devices.",
+      "html": "<button class=\"ds-rail-control\" type=\"button\" aria-label=\"Sonraki bölümler\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-rail-control{width:4.5rem;height:10rem;display:grid;place-items:center;border:0;background:rgba(8,8,8,.75);color:#fff;cursor:pointer;transition:background 160ms ease,opacity 160ms ease}.ds-rail-control svg{width:2rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.ds-rail-control:hover{background:rgba(8,8,8,.92)}.ds-rail-control:focus-visible{outline:3px solid #fff;outline-offset:-4px}"
+    },
+    {
+      "name": "Unavailable Player State",
+      "kind": "custom",
+      "description": "A recoverable video error or missing-source state that routes viewers to a legal publication page.",
+      "html": "<section class=\"ds-player-empty\" role=\"status\"><div class=\"ds-player-message\"><span class=\"ds-player-icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 32 32\"><path d=\"M8 5h16v22H8zM13 11l8 5-8 5z\"/></svg></span><h2>Video kaynağı gerekli</h2><p>Bu bölümün tam videosu henüz bağlanmadı. Bölümü yasal yayın hizmetinde açabilirsiniz.</p><a href=\"#\">Yasal yayın sayfasını aç</a></div></section>",
+      "css": ".ds-player-empty{width:100%;min-height:25rem;display:grid;place-items:center;background:radial-gradient(circle,#292929,#080808);color:#fff;font-family:var(--font-body),sans-serif}.ds-player-message{width:min(42rem,calc(100% - 2rem));text-align:center}.ds-player-icon{width:5rem;height:5rem;display:grid;place-items:center;margin:0 auto 1.5rem;border:2px solid rgba(255,255,255,.8);border-radius:50%}.ds-player-icon svg{width:2rem;fill:none;stroke:currentColor;stroke-width:1.8}.ds-player-message h2{margin:0 0 .7rem;font-size:clamp(2rem,4vw,3.5rem)}.ds-player-message p{margin:0 auto 1.5rem;color:#ddd;line-height:1.5}.ds-player-message a{display:inline-flex;padding:.75rem 1.15rem;border-radius:.3rem;background:#fff;color:#000;font-weight:700;text-decoration:none}.ds-player-message a:hover{background:rgba(255,255,255,.75)}.ds-player-message a:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Episode Shelf",
+    "overview": "Mentalist Stream follows the Netflix canon the user selected: a real episode still owns the first viewport, interface chrome recedes into black, and the catalog rises into view as horizontal shelves. The show remains the visual subject; the system exists to move a Turkish-speaking viewer from recognition to season choice to a specific episode with minimal friction.\n\nThe world is premium but pragmatic. Warm white copy, Netflix red branding, green availability metadata, and restrained gray controls sit over cinema-black surfaces. Episode imagery carries atmosphere while explicit source notes, missing-video states, HLS recovery, and adjacent-episode links keep the experience honest and operational across all 151 episode routes.",
+    "keyCharacteristics": [
+      "Full-bleed 16:9 episode imagery with layered black vignettes.",
+      "A black, dense streaming catalog composed of horizontal episode rails.",
+      "Warm white content, Netflix red identity, green match/episode metadata, and quiet gray support text.",
+      "Barlow for fast interface reading; Italiana only for the series wordmark and oversized editorial numerals.",
+      "Direct episode opening, season switching, previous/next navigation, and legal-source-aware player fallbacks."
+    ],
+    "rules": [
+      { "name": "The Image Leads Rule", "body": "Color supports real episode imagery; never flood a catalog row with decorative accent color.", "section": "colors" },
+      { "name": "The Red Is Identity Rule", "body": "Red marks the service identity and a few key accents. Ordinary episode metadata stays green or neutral.", "section": "colors" },
+      { "name": "The Streaming Voice Rule", "body": "Barlow carries every task and content detail; Italiana appears only where a large cinematic identity moment justifies it.", "section": "typography" },
+      { "name": "The Fast Shelf Rule", "body": "Preserve a wide episode thumbnail and its direct watch route at every viewport; mobile uses horizontal overflow instead of shrinking a rail into tiny cards.", "section": "layout" },
+      { "name": "The Media Depth Rule", "body": "Shadows and scale belong to media interaction; do not elevate ordinary text containers or legal notes.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let a real episode still dominate the first viewport and every episode card when available.",
+      "Do keep catalog navigation fast through direct card links, horizontal snapping, season selection, and previous/next routes.",
+      "Do preserve explicit focus outlines, reduced-motion handling, and touch-visible navigation.",
+      "Do distinguish Turkish interface copy from source-language episode titles and summaries with a clear localization note.",
+      "Do show a recoverable, legal-source-aware state when MP4 or HLS playback is absent or fails."
+    ],
+    "donts": [
+      "Don't reintroduce the discarded abstract case-file, navy-and-brass, clipped-deck visual world.",
+      "Don't replace episode stills with generic posters, ornamental diagrams, or editorial cards when real episode media exists.",
+      "Don't hide essential navigation behind hover on touch devices.",
+      "Don't imply that all 151 episodes are hosted or licensed; catalog completeness and video availability are separate facts.",
+      "Don't add oversized radii, pills, bright gradients, or decorative shadows that weaken the Netflix-canon silhouette."
+    ]
+  }
+}

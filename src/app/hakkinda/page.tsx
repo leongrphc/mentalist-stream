@@ -1,0 +1,5 @@
+export const metadata = { title: "Dizi hakkında" };
+
+export default function AboutPage() {
+  return <main id="icerik" className="inner-page"><header className="inner-hero"><span className="inner-number">151</span><div><h1>Dizi hakkında</h1><p>Gerçek, dikkatle bakana kendini gösterir.</p><small>2008–2015 · Suç · Dram · Gizem</small></div></header><section className="about-layout"><div><h2>Hikâye</h2><p>Eski bir sahne mentalisti olan Patrick Jane, olağanüstü gözlem yeteneğini California Soruşturma Bürosu'nun cinayet vakalarında kullanır. Her vaka onu, geçmişini belirleyen seri katil Red John'a biraz daha yaklaştırır.</p></div><dl><div><dt>Yaratıcı</dt><dd>Bruno Heller</dd></div><div><dt>Sezon</dt><dd>7</dd></div><div><dt>Bölüm</dt><dd>151</dd></div><div><dt>Yayın dönemi</dt><dd>2008–2015</dd></div></dl><aside><h2>Bu site hakkında</h2><p>Bu çalışma The Mentalist için hazırlanmış bağımsız bir arayüz prototipidir. Bölüm yayını yapmaz ve herhangi bir yayın hizmetini temsil etmez.</p></aside></section></main>;
+}
